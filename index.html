@@ -7,28 +7,41 @@
 </head>
 <body>
     <header class="hero">
-        <div class="container">
-            <h1>Are We Doing Enough?</h1>
-            <h2>Education, Information Sharing and Community In Open Source Hardware</h2>
-            <p class="hero-subtitle">CHI 2026 Workshop</p>
-            <div class="hero-details">
-                <span class="date">Date: TBD</span>
-                <span class="location">Location: TBD</span>
+        <div class="hero-background">
+            <nav class="navigation">
+                <div class="container">
+                    <button class="menu-toggle" onclick="toggleMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="#abstract">About</a></li>
+                        <li><a href="#participate">How to Participate</a></li>
+                        <li><a href="#schedule">Schedule</a></li>
+                        <li><a href="#organizers">Organizers</a></li>
+                        <li><a href="#sponsors">Project funding</a></li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <div class="banner-container">
+                <img src="img/workshop_webbanner.png" alt="Are We Doing Enough? Workshop Banner" class="hero-banner">
+            </div>
+            
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Are We Doing Enough?</h1>
+                    <h2>Education, Information Sharing and Community In Open Source Hardware</h2>
+                    <p class="hero-subtitle">CHI 2026 Workshop</p>
+                    <div class="hero-details">
+                        <span class="date">Date: TBD</span>
+                        <span class="location">Location: TBD</span>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
-
-    <nav class="navigation">
-        <div class="container">
-            <ul>
-                <li><a href="#abstract">About</a></li>
-                <li><a href="#participate">How to Participate</a></li>
-                <li><a href="#schedule">Schedule</a></li>
-                <li><a href="#organizers">Organizers</a></li>
-                <li><a href="#sponsors">Project Funding</a></li>
-            </ul>
-        </div>
-    </nav>
 
     <main>
         <section id="abstract" class="section">
@@ -214,6 +227,20 @@
             <p>This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</p>
         </div>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('active');
+        }
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-menu').classList.remove('active');
+            });
+        });
+    </script>
 
 </body>
 </html>
