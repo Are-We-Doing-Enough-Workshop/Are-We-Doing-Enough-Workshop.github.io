@@ -4,6 +4,35 @@
     <meta charset="UTF-8">
     <title>Are We Doing Enough? - CHI 2026 Workshop</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Added: CTA button styles -->
+    <style>
+        /* CTA button styles */
+        .cta-container { margin-top: 1.25rem; }
+        .cta-button {
+            display: inline-block;
+            background: #0066cc;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 16px 28px;
+            border-radius: 10px;
+            font-size: 1.125rem;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            transition: transform .08s ease, box-shadow .08s ease, opacity .08s ease;
+        }
+        .cta-button:focus, .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 22px rgba(0,0,0,0.16);
+            outline: none;
+        }
+        .cta-button:active {
+            transform: translateY(0);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        }
+        @media (max-width: 600px) {
+            .cta-button { display: block; width: 100%; text-align: center; font-size: 1rem; padding: 14px 18px; }
+        }
+    </style>
 </head>
 <body>
     <header class="hero">
@@ -16,11 +45,10 @@
                         <span></span>
                     </button>
                     <ul class="nav-menu">
-                        <li><a href="#abstract">About</a></li>
-                        <li><a href="#participate">How to Participate</a></li>
+                        <li><a href="#participate">Call for Participation</a></li>
                         <li><a href="#schedule">Schedule</a></li>
                         <li><a href="#organizers">Organizers</a></li>
-                        <li><a href="#sponsors">Project funding</a></li>
+                        <li><a href="#sponsors">Project Funding</a></li>
                     </ul>
                 </div>
             </nav>
@@ -38,31 +66,32 @@
                         <span class="date">Date: TBD</span>
                         <span class="location">Location: TBD</span>
                     </div>
+
+                    
                 </div>
             </div>
         </div>
     </header>
 
     <main>
-        <section id="abstract" class="section">
-            <div class="container">
-                <h2>About</h2>
-                <div class="content">
-                    <p>Constructing low volume and open source hardware devices is a hugely challenging task. Many steps in these processes lack proper support, and where solutions do exist their impact is difficult to measure. There are often significant educational, institutional and socio-economic barriers to access that may have to be navigated by those looking for help and guidance when producing their own devices.</p>
-                    <p>This workshop will explore and assess the methods and efficacy of information sharing and education tools in the hardware space; is the community doing enough to ensure that information is accessible, understandable, effective and (most importantly) utilising the best channels to reach the widest audience? We will examine industrial, academic and social spheres to construct a multidimensional image of where help can be found, what help is out there, and how it can be put to its best use.</p>
-                </div>
-            </div>
-        </section>
-
 
         <section id="participate" class="section">
             <div class="container">
-                <h2>How to Participate</h2>
+                <h2>Call for Participation</h2>
                 <div class="content">
-                    <h3>Call for Participation</h3>
                     <p>If you are interested in participation, please submit a one page positional paper or biographical paper touching on the workshop's themes.</p>
-                    <h3>For Accepted Participants</h3>
-                    <p>Accepted participants will be asked to submit a single slide with some key biographical and professional information about themselves for the Welcome activity. We will also host a pre-workshop "online cafe" on a dedicated online channel (e.g. Discord) for participants to introduce themselves and consider key topics they may wish to discuss in each session.</p>
+
+                    <!-- Added: CTA button for CFP -->
+                    <div class="cta-container">
+                        <a
+                            class="cta-button"
+                            href="https://easychair.org/my2/conference?conf=awde26"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Go to EasyChair to submit or register for the workshop">
+                            Submit / Register (EasyChair)
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
